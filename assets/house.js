@@ -1,4 +1,35 @@
 (() => {
+  const theme = (function (root) {
+    const meta = document.querySelector('meta[name="theme-color"]');
+    function apply(t, persist) {
+      root.dataset.theme = t;
+      const light = t === 'light';
+      document.querySelectorAll('[data-theme-toggle]').forEach((b) => {
+        const label = light ? 'Switch to dark theme' : 'Switch to light theme';
+        b.setAttribute('aria-label', label);
+        b.setAttribute('title', label);
+      });
+      if (meta) meta.setAttribute('content', light ? '#faf7f0' : '#0a0a0a');
+      if (persist) {
+        try {
+          localStorage.setItem('dv-theme', t);
+        } catch (e) {}
+      }
+    }
+    return {
+      apply,
+      fit: () => apply(root.dataset.theme || 'dark', false),
+      attach: () =>
+        document.querySelectorAll('[data-theme-toggle]').forEach((b) =>
+          b.addEventListener('click', () =>
+            apply(root.dataset.theme === 'light' ? 'dark' : 'light', true)
+          )
+        ),
+    };
+  })(document.documentElement);
+  theme.fit();
+  theme.attach();
+
   const revealObserver = new IntersectionObserver(
     (entries) =>
       entries.forEach((entry) => {
