@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditshego Ventures | Strategic Intelligence & Academic Excellence</title>
+    <style>
+        :root {
+            --gold: #e8c15a;
+            --dark: #0a0a0a;
+            --gray: #1a1a1a;
+            --text: #ffffff;
+            --muted: #a0a0a0;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+        nav {
+            padding: 2rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--gold);
+        }
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+
+        header {
+            padding: 100px 10%;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+        }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+        .hero-sub {
+            font-size: 1.25rem;
+            color: var(--muted);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: var(--dark);
+        }
+        .btn-primary:hover { background: #d4b04d; transform: translateY(-2px); }
+        .btn-secondary {
+            border: 1px solid #444;
+            color: var(--text);
+        }
+        .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+        .ventures {
+            padding: 100px 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .venture-card {
+            background: var(--gray);
+            padding: 60px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            transition: border-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .venture-card:hover { border-color: var(--gold); }
+        .venture-card h2 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-top: 0;
+        }
+        .venture-card p {
+            font-size: 1.1rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            padding: 50px 10%;
+            text-align: center;
+            border-top: 1px solid #333;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">DITSHEGO VENTURES</div>
+        <div class="nav-links">
+            <a href="https://aura.ditshego-ventures.co.za">AURA Intelligence</a>
+            <a href="https://school.ditshego-ventures.co.za">SCHOOL Platform</a>
+            <a href="mailto:moloti@ditshego-ventures.co.za">Contact</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Architecting the <br><span style="color: var(--gold);">Intelligence Economy.</span></h1>
+        <p class="hero-sub">Ditshego Ventures is a strategic holding company focused on the intersection of high-fidelity AI, autonomous mobility, and academic acceleration.</p>
+        <div class="cta-group">
+            <a href="https://aura.ditshego-ventures.co.za" class="btn btn-primary">Explore AURA</a>
+            <a href="https://school.ditshego-ventures.co.za" class="btn btn-secondary">Visit SCHOOL</a>
+        </div>
+    </header>
+
+    <section class="ventures">
+        <div class="venture-card">
+            <div>
+                <h2>AURA</h2>
+                <p>A national-grade intelligence surface for autonomous mobility. From the Landauer thermodynamic floor to NVIDIA-powered neural reconstruction, AURA maps the strategic future of SA transportation.</p>
+            </div>
+            <a href="https://aura.ditshego-ventures.co.za" class="btn btn-secondary" style="text-align: center;">Enter Command Centre</a>
+        </div>
+        <div class="venture-card">
+            <div>
+                <h2>SCHOOL</h2>
+                <p>Redefining academic excellence through AI-assisted learning. A comprehensive platform delivering curriculum-aligned intelligence to South African learners and educators.</p>
+            </div>
+            <a href="https://school.ditshego-ventures.co.za" class="btn btn-secondary" style="text-align: center;">Access Platform</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ditshego Ventures (Pty) Ltd. All rights reserved.</p>
+    </footer>
+</body>
+</html>
