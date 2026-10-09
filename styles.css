@@ -748,3 +748,11 @@ header { border-bottom:1px solid var(--ink-800); position:sticky; top:0; z-index
   .btn--primary,.btn--accent,.btn--outline{background:#fff !important;color:#0b1426}
   .progress,.dot,.status::before{display:none !important}
 }
+
+/* Sovereign hardening — scripting-optional reveal. If JS never runs
+   (blocked/errored), content must still be visible, never opacity:0. */
+html:not(.js) .reveal,
+html:not(.js) .section-kicker,
+html:not(.js) .venture,
+html:not(.js) .pr,
+html:not(.js) .doc { opacity:1; transform:none; }
