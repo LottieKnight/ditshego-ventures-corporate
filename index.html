@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ditshego Ventures | Strategic Intelligence & Academic Excellence</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/css/design-system.css">
     <style>
-        :root {
-            --gold: #e8c15a;
-            --dark: #0a0a0a;
-            --gray: #1a1a1a;
-            --text: #ffffff;
-            --muted: #a0a0a0;
-        }
         body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--dark);
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-onyx);
             color: var(--color-text);
             margin: 0;
             line-height: 1.6;
@@ -27,11 +22,14 @@
             border-bottom: 1px solid #333;
         }
         .logo {
-            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
             font-weight: 800;
-            letter-spacing: -1px;
             color: var(--color-gold);
+            font-size: 1.5rem;
         }
+        .logo img { height: 40px; }
         .nav-links a {
             color: var(--color-text);
             text-decoration: none;
@@ -40,88 +38,37 @@
             transition: color 0.2s;
         }
         .nav-links a:hover { color: var(--color-gold); }
-
         header {
             padding: 100px 10%;
             text-align: center;
             background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
         }
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            letter-spacing: -2px;
-            line-height: 1.1;
-        }
-        .hero-sub {
-            font-size: 1.25rem;
-            color: var(--color-muted);
-            max-width: 700px;
-            margin: 0 auto 3rem;
-        }
-        .cta-group {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        .btn-primary {
-            background: var(--gold);
-            color: var(--dark);
-        }
-        .btn-primary:hover { background: #d4b04d; transform: translateY(-2px); }
-        .btn-secondary {
-            border: 1px solid #444;
-            color: var(--color-text);
-        }
-        .btn-secondary:hover { border-color: var(--color-gold); color: var(--color-gold); }
-
-        .ventures {
-            padding: 100px 10%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
+        h1 { font-size: 4rem; margin-bottom: 1rem; color: var(--color-text); }
+        .hero-sub { font-size: 1.25rem; color: var(--color-muted); max-width: 700px; margin: 0 auto 3rem; }
+        .cta-group { display: flex; justify-content: center; gap: 20px; }
+        .ventures { padding: 100px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         .venture-card {
             background: var(--color-slate);
             padding: 60px;
-            border-radius: 20px;
+            border-radius: var(--radius-md);
             border: 1px solid #333;
-            transition: border-color 0.3s;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        .venture-card:hover { border-color: var(--color-gold); }
-        .venture-card h2 {
-            font-size: 2.5rem;
-            color: var(--color-gold);
-            margin-top: 0;
-        }
-        .venture-card p {
-            font-size: 1.1rem;
-            color: var(--color-muted);
-            margin-bottom: 2rem;
-        }
-
-        footer {
-            padding: 50px 10%;
-            text-align: center;
-            border-top: 1px solid #333;
-            color: var(--color-muted);
-            font-size: 0.9rem;
-        }
+        .venture-card:hover { border-color: var(--color-gold); transform: translateY(-4px); }
+        .venture-card h2 { font-size: 2.5rem; color: var(--color-gold); margin-top: 0; }
+        .venture-card p { font-size: 1.1rem; color: var(--color-muted); margin-bottom: 2rem; }
+        footer { padding: 50px 10%; text-align: center; border-top: 1px solid #333; color: var(--color-muted); }
     </style>
-<link rel="stylesheet" href="/css/design-system.css">
 </head>
 <body>
     <nav>
-        <div class="logo"><img src="/images/logo.svg" alt="Ditshego Ventures" style="height: 40px; vertical-align: middle;"></div>
+        <div class="logo">
+            <img src="/images/logo.svg" alt="Logo">
+            DITSHEGO VENTURES
+        </div>
         <div class="nav-links">
             <a href="https://aura.ditshego-ventures.co.za">AURA Intelligence</a>
             <a href="https://school.ditshego-ventures.co.za">SCHOOL Platform</a>
@@ -133,8 +80,8 @@
         <h1>Architecting the <br><span style="color: var(--color-gold);">Intelligence Economy.</span></h1>
         <p class="hero-sub">Ditshego Ventures is a strategic holding company focused on the intersection of high-fidelity AI, autonomous mobility, and academic acceleration.</p>
         <div class="cta-group">
-            <a href="https://aura.ditshego-ventures.co.za" class="btn btn-primary">Explore AURA</a>
-            <a href="https://school.ditshego-ventures.co.za" class="btn btn-secondary">Visit SCHOOL</a>
+            <a href="https://aura.ditshego-ventures.co.za" class="sovereign-btn btn-gold">Explore AURA</a>
+            <a href="https://school.ditshego-ventures.co.za" class="sovereign-btn btn-outline">Visit SCHOOL</a>
         </div>
     </header>
 
@@ -142,16 +89,16 @@
         <div class="venture-card">
             <div>
                 <h2>AURA</h2>
-                <p>A national-grade intelligence surface for autonomous mobility. From the Landauer thermodynamic floor to NVIDIA-powered neural reconstruction, AURA maps the strategic future of SA transportation.</p>
+                <p>A national-grade intelligence surface for autonomous mobility. Mapping the strategic future of SA transportation from the thermodynamic floor to neural reconstruction.</p>
             </div>
-            <a href="https://aura.ditshego-ventures.co.za" class="btn btn-secondary" style="text-align: center;">Enter Command Centre</a>
+            <a href="https://aura.ditshego-ventures.co.za" class="sovereign-btn btn-outline" style="text-align: center;">Enter Command Centre</a>
         </div>
         <div class="venture-card">
             <div>
                 <h2>SCHOOL</h2>
-                <p>Redefining academic excellence through AI-assisted learning. A comprehensive platform delivering curriculum-aligned intelligence to South African learners and educators.</p>
+                <p>Redefining academic excellence through AI-assisted learning. A comprehensive platform delivering curriculum-aligned intelligence to SA learners.</p>
             </div>
-            <a href="https://school.ditshego-ventures.co.za" class="btn btn-secondary" style="text-align: center;">Access Platform</a>
+            <a href="https://school.ditshego-ventures.co.za" class="sovereign-btn btn-outline" style="text-align: center;">Access Platform</a>
         </div>
     </section>
 
