@@ -1,0 +1,59 @@
+
+:root {
+    /* Core Palette */
+    --color-gold: #e8c15a;
+    --color-gold-dark: #d4b04d;
+    --color-onyx: #0a0a0a;
+    --color-slate: #1a1a1a;
+    --color-text: #ffffff;
+    --color-muted: #a0a0a0;
+    
+    /* Venture Accents */
+    --color-aura-blue: #3498db;
+    --color-school-pearl: #fdfdfd;
+    
+    /* Spacing & Geometry */
+    --radius-sm: 4px;
+    --radius-md: 12px;
+    --radius-lg: 24px;
+    --spacing-unit: 8px;
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px rgba(0,0,0,0.5);
+    --shadow-glow: 0 0 15px rgba(232, 193, 90, 0.3);
+}
+
+/* Global Sovereign Utilities */
+.sovereign-card {
+    background: var(--color-slate);
+    border: 1px solid #333;
+    border-radius: var(--radius-md);
+    padding: calc(var(--spacing-unit) * 4);
+    transition: all 0.3s ease;
+}
+.sovereign-card:hover {
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-4px);
+}
+.sovereign-btn {
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-gold {
+    background: var(--color-gold);
+    color: var(--color-onyx);
+}
+.btn-outline {
+    border: 1px solid #444;
+    color: var(--color-text);
+}
+.btn-outline:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
